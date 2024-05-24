@@ -17,9 +17,6 @@ const cachePhotos = () => {
 
 watch(photos, cachePhotos);
 
-import { ref, onMounted, watch } from 'vue';
-
-
 const loadSaved = async () => {
     const photoList = await Preferences.get({ key: PHOTO_STORAGE });
     const photosInPreferences = photoList.value ? JSON.parse(photoList.value) : [];

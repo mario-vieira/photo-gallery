@@ -12,6 +12,9 @@ PODS:
     - Capacitor
   - CapacitorKeyboard (6.0.0):
     - Capacitor
+  - CapacitorLiveUpdates (0.2.1):
+    - Capacitor
+    - IonicLiveUpdates (~> 0.5.1)
   - CapacitorNativeBiometric (0.0.1):
     - Capacitor
   - CapacitorPreferences (6.0.0):
@@ -20,6 +23,7 @@ PODS:
     - Capacitor
   - CordovaPlugins (6.0.0):
     - CapacitorCordova
+  - IonicLiveUpdates (0.5.2)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
@@ -29,10 +33,15 @@ DEPENDENCIES:
   - "CapacitorFilesystem (from `../../node_modules/@capacitor/filesystem`)"
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
+  - "CapacitorLiveUpdates (from `../../node_modules/@capacitor/live-updates`)"
   - CapacitorNativeBiometric (from `../../node_modules/capacitor-native-biometric`)
   - "CapacitorPreferences (from `../../node_modules/@capacitor/preferences`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
   - CordovaPlugins (from `../capacitor-cordova-ios-plugins`)
+
+SPEC REPOS:
+  trunk:
+    - IonicLiveUpdates
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -49,6 +58,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/haptics"
   CapacitorKeyboard:
     :path: "../../node_modules/@capacitor/keyboard"
+  CapacitorLiveUpdates:
+    :path: "../../node_modules/@capacitor/live-updates"
   CapacitorNativeBiometric:
     :path: "../../node_modules/capacitor-native-biometric"
   CapacitorPreferences:
@@ -66,11 +77,13 @@ SPEC CHECKSUMS:
   CapacitorFilesystem: 60e59ba274c234a979e7a3be2552feaadcee4263
   CapacitorHaptics: 9ebc9363f0e9b8eb4295088a0b474530acf1859b
   CapacitorKeyboard: deacbd09d8d1029c3681197fb05d206b721d5f73
+  CapacitorLiveUpdates: 944b643605f6f00b4462ce6318e5c9ecc1c60951
   CapacitorNativeBiometric: b47637a8cd349bdac014424bb4ddcae9ee5d4919
   CapacitorPreferences: c9b839a80baa72e4ed4bdb117618e1950d3046b5
   CapacitorStatusBar: 2e4369f99166125435641b1908d05f561eaba6f6
   CordovaPlugins: f93d8cb50a534f19bda610c42e12f9711df087e9
+  IonicLiveUpdates: d14e4b0e6a46c492b9e48390ed51a79278059bfd
 
-PODFILE CHECKSUM: 9f1affcb708b6ecec19eda17d71b4f2d3db74edc
+PODFILE CHECKSUM: 17dfd7c76695e8224c9d88d7bccc0bf1ec72d98f
 
 COCOAPODS: 1.15.2

@@ -43,7 +43,7 @@ export default defineComponent({
         }
     },
     methods: {
-        handleChange(event) {
+        handleChange(event:any) {
             if (this.disabled) {
                 return;
             }
