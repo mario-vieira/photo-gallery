@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import MyApp from './App.vue'
 import router from './router';
-
 import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,10 +33,28 @@ import '@ionic/vue/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const app = createApp(App)
+import { App, URLOpenListenerEvent } from '@capacitor/app';
+
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+defineCustomElements(window);
+
+const app = createApp(MyApp)
   .use(IonicVue)
   .use(router);
 
 router.isReady().then(() => {
   app.mount('#app');
+});
+
+App.addListener('appUrlOpen', function (event: URLOpenListenerEvent) {
+  // Example url: https://beerswift.app/tabs/tabs2
+  // slug = /tabs/tabs2
+  const slug = event.url.split('.app').pop();
+
+  // We only push to the route if there is a slug present
+  if (slug) {
+    router.push({
+      path: slug,
+    });
+  }
 });

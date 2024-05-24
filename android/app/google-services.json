@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "241897350764",
+    "project_id": "hix-app-8512b",
+    "storage_bucket": "hix-app-8512b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241897350764:android:cee7b71d8cbed54b915a49",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQgBt76HuYYTlM9aN23KLsseHQKlVPk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
