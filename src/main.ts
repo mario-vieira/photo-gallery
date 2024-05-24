@@ -62,17 +62,18 @@ App.addListener('appUrlOpen', function (event: URLOpenListenerEvent) {
 import * as LiveUpdates from '@capacitor/live-updates';
 
 // Register event to fire each time user resumes the app
-App.addListener('resume', async () => {
+App.addListener('resume', () => {
   if (localStorage.shouldReloadApp === 'true') {
-    await LiveUpdates.reload();
+    LiveUpdates.reload();
   }
   else {
-    const result = await LiveUpdates.sync();
-    localStorage.shouldReloadApp = result.activeApplicationPathChanged;
+    LiveUpdates.sync().then((result) => {
+        localStorage.shouldReloadApp = result.activeApplicationPathChanged;
+    });
   }
-});
+})
 
 // First sync on app load
-const result = await LiveUpdates.sync();
-localStorage.shouldReloadApp = result.activeApplicationPathChanged;
-
+LiveUpdates.sync().then((result) => {
+    localStorage.shouldReloadApp = result.activeApplicationPathChanged;
+});
